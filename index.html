@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justan Online Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2 class="logo">Justan Store</h2>
+    <ul>
+      <li><a href="#" onclick="showPage('home')">Home</a></li>
+      <li><a href="#" onclick="showPage('products')">Products</a></li>
+      <li><a href="#" onclick="showPage('cart')">Cart</a></li>
+      <li><a href="#" onclick="showPage('login')">Login</a></li>
+      <li><a href="#" onclick="showPage('register')">Register</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="page active">
+    <div class="hero">
+      <h1>Welcome to Justan Online Store</h1>
+      <p>Your simple online shop for drinks, snacks, and instant noodles.</p>
+      <button onclick="showPage('products')">Shop Now</button>
+    </div>
+  </section>
+
+  <section id="products" class="page">
+    <h1>Products</h1>
+    <div id="productList" class="product-grid"></div>
+  </section>
+
+  <section id="details" class="page">
+    <div id="productDetails" class="details-box"></div>
+  </section>
+
+  <section id="cart" class="page">
+    <h1>Shopping Cart</h1>
+    <div id="cartItems"></div>
+    <h2 id="cartTotal">Total: $0</h2>
+
+    <form id="orderForm" action="https://formsubmit.co/justanchen2010@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Order - Justan Online Store">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="Order Details" id="orderInput">
+
+      <h2>Checkout</h2>
+
+      <label>Name</label>
+      <input type="text" name="Customer Name" id="customerName" required>
+
+      <label>Email</label>
+      <input type="email" name="Customer Email" id="customerEmail" required>
+
+      <label>Address</label>
+      <textarea name="Address" id="customerAddress" required></textarea>
+
+      <button type="submit">Send Order</button>
+    </form>
+  </section>
+
+  <section id="login" class="page">
+    <div class="form-box">
+      <h1>Login</h1>
+      <label>Email or Username</label>
+      <input type="text" id="loginEmail" placeholder="Enter email or username">
+
+      <label>Password</label>
+      <input type="password" id="loginPassword" placeholder="Enter password">
+
+      <button onclick="loginUser()">Login</button>
+      <p id="loginMessage"></p>
+    </div>
+  </section>
+
+  <section id="register" class="page">
+    <div class="form-box">
+      <h1>Register</h1>
+
+      <label>Full Name</label>
+      <input type="text" id="registerName" placeholder="Enter your name">
+
+      <label>Email</label>
+      <input type="email" id="registerEmail" placeholder="Enter your email">
+
+      <label>Password</label>
+      <input type="password" id="registerPassword" placeholder="Create password">
+
+      <label>Phone Number</label>
+      <input type="text" id="registerPhone" placeholder="Enter phone number">
+
+      <button onclick="registerUser()">Register</button>
+      <p id="registerMessage"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Justan Online Store</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
