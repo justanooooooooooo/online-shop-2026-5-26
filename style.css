@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* BODY */
+
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f4;
@@ -15,6 +17,7 @@ body {
 .navbar {
   background: #111;
   color: white;
+
   padding: 15px 30px;
 
   display: flex;
@@ -25,12 +28,13 @@ body {
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 28px;
 }
 
 .navbar ul {
-  display: flex;
   list-style: none;
+
+  display: flex;
   gap: 20px;
 }
 
@@ -59,8 +63,11 @@ body {
 
 .hero {
   background: white;
+
   padding: 60px 20px;
+
   border-radius: 12px;
+
   text-align: center;
 }
 
@@ -76,10 +83,13 @@ body {
 
 .hero button {
   padding: 12px 24px;
+
   border: none;
+  border-radius: 8px;
+
   background: black;
   color: white;
-  border-radius: 8px;
+
   cursor: pointer;
 }
 
@@ -93,19 +103,24 @@ body {
   margin-top: 25px;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(230px, 1fr));
 
   gap: 20px;
 }
 
 .product-card {
   background: white;
+
   padding: 15px;
+
   border-radius: 12px;
 
   text-align: center;
 
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow:
+    0 2px 10px rgba(0,0,0,0.1);
 }
 
 .product-card img {
@@ -115,12 +130,12 @@ body {
   object-fit: contain;
 
   background: white;
+
   border-radius: 10px;
 }
 
 .product-card h2 {
   margin: 12px 0;
-  font-size: 22px;
 }
 
 .product-card p {
@@ -129,6 +144,7 @@ body {
 
 .product-card button {
   padding: 10px 15px;
+
   margin: 5px;
 
   border: none;
@@ -148,11 +164,14 @@ body {
 
 .details-box {
   background: white;
-  padding: 30px;
-  border-radius: 12px;
 
   max-width: 900px;
+
   margin: auto;
+
+  padding: 30px;
+
+  border-radius: 12px;
 
   text-align: center;
 }
@@ -160,6 +179,7 @@ body {
 .details-box img {
   width: 300px;
   max-width: 100%;
+
   object-fit: contain;
 
   margin-bottom: 20px;
@@ -198,6 +218,7 @@ body {
   background: white;
 
   padding: 20px;
+
   margin-bottom: 15px;
 
   border-radius: 12px;
@@ -217,10 +238,10 @@ body {
   border: none;
   border-radius: 6px;
 
-  cursor: pointer;
-
   background: black;
   color: white;
+
+  cursor: pointer;
 }
 
 #cartTotal {
@@ -234,6 +255,7 @@ form {
   background: white;
 
   padding: 25px;
+
   border-radius: 12px;
 
   max-width: 500px;
@@ -258,8 +280,8 @@ form textarea {
 
   padding: 10px;
 
-  border-radius: 8px;
   border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 form textarea {
@@ -293,6 +315,7 @@ form button:hover {
   background: white;
 
   max-width: 500px;
+
   margin: auto;
 
   padding: 30px;
@@ -318,10 +341,10 @@ form button:hover {
 
   padding: 10px;
 
-  border-radius: 8px;
-  border: 1px solid #ccc;
-
   margin-bottom: 15px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 .form-box button {
