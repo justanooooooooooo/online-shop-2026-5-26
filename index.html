@@ -10,6 +10,7 @@
 
   <nav class="navbar">
     <h2 class="logo">Justan Store</h2>
+
     <ul>
       <li><a href="#" onclick="showPage('home')">Home</a></li>
       <li><a href="#" onclick="showPage('products')">Products</a></li>
@@ -29,6 +30,7 @@
 
   <section id="products" class="page">
     <h1>Products</h1>
+    <p>Choose your favorite items and add them to your cart.</p>
     <div id="productList" class="product-grid"></div>
   </section>
 
@@ -38,7 +40,9 @@
 
   <section id="cart" class="page">
     <h1>Shopping Cart</h1>
+
     <div id="cartItems"></div>
+
     <h2 id="cartTotal">Total: $0</h2>
 
     <form id="orderForm" action="https://formsubmit.co/justanchen2010@gmail.com" method="POST">
@@ -48,13 +52,13 @@
 
       <h2>Checkout</h2>
 
-      <label>Name</label>
+      <label for="customerName">Name</label>
       <input type="text" name="Customer Name" id="customerName" required>
 
-      <label>Email</label>
+      <label for="customerEmail">Email</label>
       <input type="email" name="Customer Email" id="customerEmail" required>
 
-      <label>Address</label>
+      <label for="customerAddress">Address</label>
       <textarea name="Address" id="customerAddress" required></textarea>
 
       <button type="submit">Send Order</button>
@@ -64,10 +68,11 @@
   <section id="login" class="page">
     <div class="form-box">
       <h1>Login</h1>
-      <label>Email or Username</label>
+
+      <label for="loginEmail">Email or Username</label>
       <input type="text" id="loginEmail" placeholder="Enter email or username">
 
-      <label>Password</label>
+      <label for="loginPassword">Password</label>
       <input type="password" id="loginPassword" placeholder="Enter password">
 
       <button onclick="loginUser()">Login</button>
@@ -79,16 +84,16 @@
     <div class="form-box">
       <h1>Register</h1>
 
-      <label>Full Name</label>
+      <label for="registerName">Full Name</label>
       <input type="text" id="registerName" placeholder="Enter your name">
 
-      <label>Email</label>
+      <label for="registerEmail">Email</label>
       <input type="email" id="registerEmail" placeholder="Enter your email">
 
-      <label>Password</label>
+      <label for="registerPassword">Password</label>
       <input type="password" id="registerPassword" placeholder="Create password">
 
-      <label>Phone Number</label>
+      <label for="registerPhone">Phone Number</label>
       <input type="text" id="registerPhone" placeholder="Enter phone number">
 
       <button onclick="registerUser()">Register</button>
