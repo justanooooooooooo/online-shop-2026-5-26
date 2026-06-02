@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Justan Online Store</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- NAVBAR -->
+
   <nav class="navbar">
+
     <h2 class="logo">Justan Store</h2>
 
     <ul>
@@ -18,93 +22,220 @@
       <li><a href="#" onclick="showPage('login')">Login</a></li>
       <li><a href="#" onclick="showPage('register')">Register</a></li>
     </ul>
+
   </nav>
 
+  <!-- HOME PAGE -->
+
   <section id="home" class="page active">
+
     <div class="hero">
+
       <h1>Welcome to Justan Online Store</h1>
-      <p>Your simple online shop for drinks, snacks, and instant noodles.</p>
-      <button onclick="showPage('products')">Shop Now</button>
+
+      <p>
+        Your online shop for drinks, snacks, and instant noodles.
+      </p>
+
+      <button onclick="showPage('products')">
+        Shop Now
+      </button>
+
     </div>
+
   </section>
+
+  <!-- PRODUCTS PAGE -->
 
   <section id="products" class="page">
+
     <h1>Products</h1>
-    <p>Choose your favorite items and add them to your cart.</p>
+
+    <p>
+      Choose your favorite products and add them to your cart.
+    </p>
+
     <div id="productList" class="product-grid"></div>
+
   </section>
+
+  <!-- PRODUCT DETAILS -->
 
   <section id="details" class="page">
+
     <div id="productDetails" class="details-box"></div>
+
   </section>
 
+  <!-- SHOPPING CART -->
+
   <section id="cart" class="page">
+
     <h1>Shopping Cart</h1>
 
     <div id="cartItems"></div>
 
     <h2 id="cartTotal">Total: $0</h2>
 
-    <form id="orderForm" action="https://formsubmit.co/justanchen2010@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New Order - Justan Online Store">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="Order Details" id="orderInput">
+    <!-- CHECKOUT FORM -->
+
+    <form
+      id="orderForm"
+      action="https://formsubmit.co/justanchen2010@gmail.com"
+      method="POST"
+    >
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Order - Justan Online Store"
+      >
+
+      <input
+        type="hidden"
+        name="_captcha"
+        value="false"
+      >
+
+      <input
+        type="hidden"
+        name="Order Details"
+        id="orderInput"
+      >
 
       <h2>Checkout</h2>
 
-      <label for="customerName">Name</label>
-      <input type="text" name="Customer Name" id="customerName" required>
+      <label>Name</label>
 
-      <label for="customerEmail">Email</label>
-      <input type="email" name="Customer Email" id="customerEmail" required>
+      <input
+        type="text"
+        id="customerName"
+        name="Customer Name"
+        required
+      >
 
-      <label for="customerAddress">Address</label>
-      <textarea name="Address" id="customerAddress" required></textarea>
+      <label>Email</label>
 
-      <button type="submit">Send Order</button>
+      <input
+        type="email"
+        id="customerEmail"
+        name="Customer Email"
+        required
+      >
+
+      <label>Address</label>
+
+      <textarea
+        id="customerAddress"
+        name="Address"
+        required
+      ></textarea>
+
+      <button type="submit">
+        Send Order
+      </button>
+
     </form>
+
   </section>
+
+  <!-- LOGIN PAGE -->
 
   <section id="login" class="page">
+
     <div class="form-box">
+
       <h1>Login</h1>
 
-      <label for="loginEmail">Email or Username</label>
-      <input type="text" id="loginEmail" placeholder="Enter email or username">
+      <label>Email</label>
 
-      <label for="loginPassword">Password</label>
-      <input type="password" id="loginPassword" placeholder="Enter password">
+      <input
+        type="text"
+        id="loginEmail"
+        placeholder="Enter your email"
+      >
 
-      <button onclick="loginUser()">Login</button>
+      <label>Password</label>
+
+      <input
+        type="password"
+        id="loginPassword"
+        placeholder="Enter your password"
+      >
+
+      <button onclick="loginUser()">
+        Login
+      </button>
+
       <p id="loginMessage"></p>
+
     </div>
+
   </section>
+
+  <!-- REGISTER PAGE -->
 
   <section id="register" class="page">
+
     <div class="form-box">
+
       <h1>Register</h1>
 
-      <label for="registerName">Full Name</label>
-      <input type="text" id="registerName" placeholder="Enter your name">
+      <label>Full Name</label>
 
-      <label for="registerEmail">Email</label>
-      <input type="email" id="registerEmail" placeholder="Enter your email">
+      <input
+        type="text"
+        id="registerName"
+        placeholder="Enter your full name"
+      >
 
-      <label for="registerPassword">Password</label>
-      <input type="password" id="registerPassword" placeholder="Create password">
+      <label>Email</label>
 
-      <label for="registerPhone">Phone Number</label>
-      <input type="text" id="registerPhone" placeholder="Enter phone number">
+      <input
+        type="email"
+        id="registerEmail"
+        placeholder="Enter your email"
+      >
 
-      <button onclick="registerUser()">Register</button>
+      <label>Password</label>
+
+      <input
+        type="password"
+        id="registerPassword"
+        placeholder="Create password"
+      >
+
+      <label>Phone Number</label>
+
+      <input
+        type="text"
+        id="registerPhone"
+        placeholder="Enter phone number"
+      >
+
+      <button onclick="registerUser()">
+        Register
+      </button>
+
       <p id="registerMessage"></p>
+
     </div>
+
   </section>
 
+  <!-- FOOTER -->
+
   <footer>
-    <p>© 2026 Justan Online Store</p>
+
+    <p>
+      © 2026 Justan Online Store
+    </p>
+
   </footer>
 
+  <!-- JAVASCRIPT -->
+
   <script src="script.js"></script>
+
 </body>
 </html>
